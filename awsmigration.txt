@@ -1,9 +1,0 @@
-﻿[‎7/‎13/‎2017 8:34 PM] paripelli, niranjan: 
-Actions:
-1. To verify HTTP or HTTPS connections with clients
-[‎7/‎13/‎2017 8:36 PM] paripelli, niranjan: 
-2. 	
-[‎7/‎13/‎2017 8:39 PM] paripelli, niranjan: 
-3. Are we using JBOSS? 
-[‎7/‎13/‎2017 8:47 PM] Soneji, Nilay: 
-https://rndwiki.corp.hpicorp.net/confluence/display/CLOUD/AWS+Architecture - AWS arch 
