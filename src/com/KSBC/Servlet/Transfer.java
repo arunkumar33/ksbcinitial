@@ -19,7 +19,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.KSBC.JSPRelatedFunctions.JSPRelatedFunctionsimp;
-import com.KSBC.Util.JDBCUtil;
 
 /**
  * Servlet implementation class Transfer
@@ -36,7 +35,7 @@ public class Transfer extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	/**
+	/** 
 	 * @see Servlet#init(ServletConfig)
 	 */
 	public void init(ServletConfig config) throws ServletException {
@@ -57,35 +56,40 @@ public class Transfer extends HttpServlet {
 	{
 		// TODO Auto-generated method stub
 		
-		String Name = (String)request.getParameter("Name");
-		String KARNumber = (String)request.getParameter("KARNumber");
-		String Place= (String)request.getParameter("Place");
-		String Remarks= (String)request.getParameter("Remarks");
-		String NocNumber= (String)request.getParameter("NocNumber");
-		 SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-		 
-		 LocalDate today = LocalDate.now();
-		Date TodayDate = java.sql.Date.valueOf(today);
-		 System.out.println(request.getParameter("ResumptionDate") + "ResumptionDate");
-		  java.util.Date parsed = null;
-			try {
-				parsed =  format.parse(request.getParameter("ResumptionDate"));
-				 java.sql.Date datesql = new java.sql.Date(parsed.getTime());
-			} catch (ParseException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			 java.sql.Date datesql = new java.sql.Date(parsed.getTime());
-Connection conn = null;
-String responseString = " Error while processing please try again later ";
-
-JSPRelatedFunctionsimp JSPRelatedFunctionsimp = new JSPRelatedFunctionsimp();
+		
+    String Name = request.getParameter("Name");
+    String KARNumber = request.getParameter("KARNumber");
+    String Place = request.getParameter("Place");
+    String Remarks = request.getParameter("Remarks");
+    String AnotherRemarks = request.getParameter("AnotherRemarks");
+    String NocNumber = request.getParameter("NocNumber");
+    SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+    
+    LocalDate today = LocalDate.now();
+    java.sql.Date TodayDate = java.sql.Date.valueOf(today);
+    System.out.println(request.getParameter("ResumptionDate") + "ResumptionDate");
+    java.util.Date parsed = null;
+    try {
+      parsed = format.parse(request.getParameter("ResumptionDate"));
+      java.sql.Date localDate1 = new java.sql.Date(parsed.getTime());
+    }
+    catch (ParseException e) {
+      e.printStackTrace();
+    }
+    java.sql.Date datesql = new java.sql.Date(parsed.getTime());
+    Connection conn = null;
+    String responseString = " Error while processing please try again later ";
+    
+    JSPRelatedFunctionsimp JSPRelatedFunctionsimp = new JSPRelatedFunctionsimp();
+    try
+    {
+      JSPRelatedFunctionsimp.UpdateRemarks(KARNumber, AnotherRemarks);
 
 String enrollmentID = JSPRelatedFunctionsimp.GetDetailEnrollemntIDFromKAR(KARNumber);
-try {
+
 
 	//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-	/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+	String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 	String user = "sa";
 	String pass = "ksbc@123";
 	System.out.println("Hi");
@@ -96,15 +100,7 @@ try {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
-	conn = DriverManager.getConnection(dbURL, user, pass);*/
-	try
-	{
-	 conn = JDBCUtil.GetConnection();
-	 
-	}catch(Exception e)
-	{
-		e.printStackTrace();
-	}
+	conn = DriverManager.getConnection(dbURL, user, pass);
 	if (conn != null) {
 		
 		

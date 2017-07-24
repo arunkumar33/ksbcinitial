@@ -65,6 +65,7 @@ public class OfflineLineFormConfirmationUpdate extends HttpServlet {
 		// TODO Auto-generated method stub
 		 response.setContentType("text/html");
 		    PrintWriter out = response.getWriter();
+		    String responseString = "Updated Successfully";
 			Session Session = HibernateUtil.getSessionFactory().openSession();
 			Session.beginTransaction();
 			
@@ -163,8 +164,9 @@ System.out.println("DOne");
 		catch(Exception e)
 		{
 			e.printStackTrace();
+			  responseString = "Error in update Please try again Later";
 		}
-		 String   responseString="Updated Successfully";
+		    
 		    out.println(responseString);
 		    
 		    

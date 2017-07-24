@@ -32,7 +32,7 @@ public class StampSectionAssociation extends HttpServlet {
      * @see HttpServlet#HttpServlet()
      */
     public StampSectionAssociation() {
-        super();
+        super(); 
         // TODO Auto-generated constructor stub
     }
 
@@ -65,7 +65,7 @@ public class StampSectionAssociation extends HttpServlet {
 		System.out.println(districtName);
 		associationBean.setDistrict(districtName);
 		
-		String associationName=request.getParameter(districtName);
+		String associationName=request.getParameter("associationName");
 		System.out.println(associationName + "associationName1");
 		associationBean.setAssociationName(associationName);
 		
