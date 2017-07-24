@@ -10,11 +10,14 @@ public class JDBCUtil {
 public static  Connection GetConnection()
 {
 
-		//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-		String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+		//String dbURL = "jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+	
+	
+	
+		String dbURL="jdbc:sqlserver://localhost:1434;database=KSBCL;instanceName=KSBC;";
 		String user = "sa";
-		String pass = "ksbc@123";
-		System.out.println("Hi");
+		String pass = "ksbc";
+		
 		Connection conn=null;
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");

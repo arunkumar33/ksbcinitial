@@ -1995,7 +1995,7 @@ static long Global_PDC=0;
 			try {
 
 				//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-				String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*	String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 				String user = "sa";
 				String pass = "ksbc@123";
 				System.out.println("Hi");
@@ -2006,7 +2006,15 @@ static long Global_PDC=0;
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				conn = DriverManager.getConnection(dbURL, user, pass);
+				conn = DriverManager.getConnection(dbURL, user, pass);*/
+				try
+				{
+				 conn = JDBCUtil.GetConnection();
+				 
+				}catch(Exception e)
+				{
+					e.printStackTrace();
+				}
 				if (conn != null) {
 					DatabaseMetaData dm = (DatabaseMetaData) conn.getMetaData();
 					
@@ -2880,6 +2888,7 @@ static long Global_PDC=0;
 	{
         JSPRelatedFunctionsimp JSPRelatedFunctionsimp = new JSPRelatedFunctionsimp();
      String NameChairman="";
+     System.out.println(EnrollmentDate + "EnrollmentDate");
 		int SLNumber = JSPRelatedFunctionsimp.GetSLNumberofChairmanSignature(EnrollmentDate); 
 		if(SLNumber>0)
 		{
@@ -3667,7 +3676,7 @@ class numberToWords{
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			System.out.println("Hi");
@@ -3678,7 +3687,15 @@ class numberToWords{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 				DatabaseMetaData dm = (DatabaseMetaData) conn.getMetaData();
 			
@@ -5215,7 +5232,7 @@ class numberToWords{
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			System.out.println("Hi");
@@ -5226,7 +5243,15 @@ class numberToWords{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 		
 			//	 java.sql.Statement stmt = conn.createStatement();
@@ -5362,7 +5387,7 @@ class numberToWords{
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			System.out.println("Hi");
@@ -5373,7 +5398,15 @@ class numberToWords{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 				DatabaseMetaData dm = (DatabaseMetaData) conn.getMetaData();
 			//	 java.sql.Statement stmt = conn.createStatement();
@@ -5533,7 +5566,7 @@ class numberToWords{
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			System.out.println("Hi");
@@ -5544,7 +5577,15 @@ class numberToWords{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 				DatabaseMetaData dm = (DatabaseMetaData) conn.getMetaData();
 				System.out.println("Driver name: " + dm.getDriverName());
@@ -5668,7 +5709,7 @@ class numberToWords{
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			System.out.println("Hi");
@@ -5679,7 +5720,15 @@ class numberToWords{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 				DatabaseMetaData dm = (DatabaseMetaData) conn.getMetaData();
 				System.out.println("Driver name: " + dm.getDriverName());
@@ -5804,18 +5853,26 @@ class numberToWords{
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
-			System.out.println("Hi");
+			System.out.println("Hi");*/
 			
-			try {
+			/*try {
 				Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 				DatabaseMetaData dm = (DatabaseMetaData) conn.getMetaData();
 				System.out.println("Driver name: " + dm.getDriverName());
@@ -5940,7 +5997,7 @@ class numberToWords{
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			System.out.println("Hi");
@@ -5951,7 +6008,15 @@ class numberToWords{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 				DatabaseMetaData dm = (DatabaseMetaData) conn.getMetaData();
 				System.out.println("Driver name: " + dm.getDriverName());
@@ -6686,7 +6751,7 @@ System.out.println(EnrollmentDetails.getRollNo());
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			System.out.println("Hi");
@@ -6697,7 +6762,15 @@ System.out.println(EnrollmentDetails.getRollNo());
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 				DatabaseMetaData dm = (DatabaseMetaData) conn.getMetaData();
 				System.out.println("Driver name: " + dm.getDriverName());
@@ -9219,7 +9292,7 @@ Long total=(long) 0;
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			System.out.println("Hi");
@@ -9230,7 +9303,15 @@ Long total=(long) 0;
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 				DatabaseMetaData dm = (DatabaseMetaData) conn.getMetaData();
 				System.out.println("Driver name: " + dm.getDriverName());
@@ -9360,7 +9441,7 @@ Long total=(long) 0;
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			System.out.println("Hi");
@@ -9371,7 +9452,15 @@ Long total=(long) 0;
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 				DatabaseMetaData dm = (DatabaseMetaData) conn.getMetaData();
 				
@@ -9449,7 +9538,7 @@ Long total=(long) 0;
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			System.out.println("Hi");
@@ -9460,7 +9549,15 @@ Long total=(long) 0;
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 					      String sql;
 			      //sql = "  select EnrollmentId   FROM [KSBCL].[dbo].[Enrollment_WelfareFundPayments] where EnrollmentId='KAR/1/2002'";
@@ -9542,7 +9639,7 @@ Long total=(long) 0;
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+		/*	String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			System.out.println("Hi");
@@ -9553,7 +9650,15 @@ Long total=(long) 0;
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 				
 			      String sql;
@@ -9644,7 +9749,7 @@ Long total=(long) 0;
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			System.out.println("Hi");
@@ -9655,7 +9760,15 @@ Long total=(long) 0;
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 				DatabaseMetaData dm = (DatabaseMetaData) conn.getMetaData();
 			
@@ -9740,7 +9853,7 @@ Long total=(long) 0;
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			System.out.println("Hi");
@@ -9751,7 +9864,15 @@ Long total=(long) 0;
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 				DatabaseMetaData dm = (DatabaseMetaData) conn.getMetaData();
 				System.out.println("Driver name: " + dm.getDriverName());
@@ -9839,7 +9960,7 @@ Long total=(long) 0;
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			System.out.println("Hi");
@@ -9850,7 +9971,15 @@ Long total=(long) 0;
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 				//	 java.sql.Statement stmt = conn.createStatement();
 				
@@ -10009,7 +10138,7 @@ Long total=(long) 0;
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			System.out.println("Hi");
@@ -10021,7 +10150,15 @@ Long total=(long) 0;
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 				DatabaseMetaData dm = (DatabaseMetaData) conn.getMetaData();
 				//	 java.sql.Statement stmt = conn.createStatement();
@@ -10097,7 +10234,7 @@ Long total=(long) 0;
 			try {
 
 				//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-				String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+				/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 				String user = "sa";
 				String pass = "ksbc@123";
 				System.out.println("Hi");
@@ -10108,7 +10245,15 @@ Long total=(long) 0;
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				conn = DriverManager.getConnection(dbURL, user, pass);
+				conn = DriverManager.getConnection(dbURL, user, pass);*/
+				try
+				{
+				 conn = JDBCUtil.GetConnection();
+				 
+				}catch(Exception e)
+				{
+					e.printStackTrace();
+				}
 				if (conn != null) {
 					DatabaseMetaData dm = (DatabaseMetaData) conn.getMetaData();
 					System.out.println("Driver name: " + dm.getDriverName());
@@ -10357,7 +10502,7 @@ Long total=(long) 0;
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			System.out.println("Hi");
@@ -10368,7 +10513,15 @@ Long total=(long) 0;
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 				DatabaseMetaData dm = (DatabaseMetaData) conn.getMetaData();
 				System.out.println("Driver name: " + dm.getDriverName());
@@ -10490,7 +10643,7 @@ Long total=(long) 0;
 			try {
 
 				//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-				String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+				/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 				String user = "sa";
 				String pass = "ksbc@123";
 				System.out.println("Hi");
@@ -10501,7 +10654,15 @@ Long total=(long) 0;
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				conn = DriverManager.getConnection(dbURL, user, pass);
+				conn = DriverManager.getConnection(dbURL, user, pass);*/
+				try
+				{
+				 conn = JDBCUtil.GetConnection();
+				 
+				}catch(Exception e)
+				{
+					e.printStackTrace();
+				}
 				if (conn != null) {
 					DatabaseMetaData dm = (DatabaseMetaData) conn.getMetaData();
 				//	 java.sql.Statement stmt = conn.createStatement();
@@ -11415,7 +11576,7 @@ Long total=(long) 0;
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			
@@ -11425,7 +11586,15 @@ Long total=(long) 0;
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 			//	 java.sql.Statement stmt = conn.createStatement();
 				
@@ -12195,7 +12364,7 @@ Long total=(long) 0;
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			System.out.println("Hi");
@@ -12206,7 +12375,15 @@ Long total=(long) 0;
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 				DatabaseMetaData dm = (DatabaseMetaData) conn.getMetaData();
 				//	 java.sql.Statement stmt = conn.createStatement();
@@ -13253,7 +13430,7 @@ Long total=(long) 0;
 			try {
 
 				//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-				String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+				/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 				String user = "sa";
 				String pass = "ksbc@123";
 				System.out.println("Hi");
@@ -13264,7 +13441,15 @@ Long total=(long) 0;
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				conn = DriverManager.getConnection(dbURL, user, pass);
+				conn = DriverManager.getConnection(dbURL, user, pass);*/
+				try
+				{
+				 conn = JDBCUtil.GetConnection();
+				 
+				}catch(Exception e)
+				{
+					e.printStackTrace();
+				}
 				if (conn != null) {
 					
 				      String sql;
@@ -13529,7 +13714,7 @@ Long total=(long) 0;
 				try {
 
 					//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-					String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+					/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 					String user = "sa";
 					String pass = "ksbc@123";
 					System.out.println("Hi");
@@ -13540,7 +13725,15 @@ Long total=(long) 0;
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-					conn = DriverManager.getConnection(dbURL, user, pass);
+					conn = DriverManager.getConnection(dbURL, user, pass);*/
+					try
+					{
+					 conn = JDBCUtil.GetConnection();
+					 
+					}catch(Exception e)
+					{
+						e.printStackTrace();
+					}
 					if (conn != null) {
 						DatabaseMetaData dm = (DatabaseMetaData) conn.getMetaData();
 					//	 java.sql.Statement stmt = conn.createStatement();
@@ -13555,7 +13748,7 @@ Long total=(long) 0;
 			
 						// coming
 						System.out.println("Coming Here All");
-					sql="SELECT RollNo,Name,EnrollmentRegistrationNo,FatherName,EnrollmentDate,EnrollmentId FROM EnrollmentDetails where EnrollmentDate=?  ORDER BY  TRY_CAST (SUBSTRING(RollNo,CHARINDEX('/',RollNo)+1, CHARINDEX('/',RollNo,CHARINDEX('/',RollNo)+1) -CHARINDEX('/',RollNo)-1)as int)  Asc ";
+					sql="SELECT RollNo,Name,EnrollmentRegistrationNo,FatherName,EnrollmentDate,EnrollmentId FROM EnrollmentDetails where EnrollmentDate=?  ORDER BY   RollNo Asc ";
 						System.out.println(StartDate1  + " StartDate1");
 				 PrepareStateMent = conn.prepareStatement(sql);
 				 PrepareStateMent.setTimestamp(1,StartDate1);
@@ -14462,7 +14655,7 @@ Long total=(long) 0;
 			try {
 
 				//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-				String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+				/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 				String user = "sa";
 				String pass = "ksbc@123";
 				System.out.println("Hi");
@@ -14473,7 +14666,15 @@ Long total=(long) 0;
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				conn = DriverManager.getConnection(dbURL, user, pass);
+				conn = DriverManager.getConnection(dbURL, user, pass);*/
+				try
+				{
+				 conn = JDBCUtil.GetConnection();
+				 
+				}catch(Exception e)
+				{
+					e.printStackTrace();
+				}
 				if (conn != null) {
 					
 				      String sql;
@@ -14623,7 +14824,7 @@ Long total=(long) 0;
 			try {
 
 				//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-				String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+				/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 				String user = "sa";
 				String pass = "ksbc@123";
 				System.out.println("Hi");
@@ -14634,7 +14835,15 @@ Long total=(long) 0;
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				conn = DriverManager.getConnection(dbURL, user, pass);
+				conn = DriverManager.getConnection(dbURL, user, pass);*/
+				try
+				{
+				 conn = JDBCUtil.GetConnection();
+				 
+				}catch(Exception e)
+				{
+					e.printStackTrace();
+				}
 				if (conn != null) {
 					
 				      String sql;
@@ -14763,7 +14972,7 @@ Long total=(long) 0;
 			try {
 
 				//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-				String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+				/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 				String user = "sa";
 				String pass = "ksbc@123";
 				System.out.println("Hi");
@@ -14774,7 +14983,15 @@ Long total=(long) 0;
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				conn = DriverManager.getConnection(dbURL, user, pass);
+				conn = DriverManager.getConnection(dbURL, user, pass);*/
+				try
+				{
+				 conn = JDBCUtil.GetConnection();
+				 
+				}catch(Exception e)
+				{
+					e.printStackTrace();
+				}
 				if (conn != null) {
 					
 				      String sql;
@@ -14926,7 +15143,7 @@ Long total=(long) 0;
 			try {
 
 				//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-				String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+				/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 				String user = "sa";
 				String pass = "ksbc@123";
 				System.out.println("Hi");
@@ -14937,7 +15154,15 @@ Long total=(long) 0;
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				conn = DriverManager.getConnection(dbURL, user, pass);
+				conn = DriverManager.getConnection(dbURL, user, pass);*/
+				try
+				{
+				 conn = JDBCUtil.GetConnection();
+				 
+				}catch(Exception e)
+				{
+					e.printStackTrace();
+				}
 				if (conn != null) {
 					
 				      String sql;
@@ -15071,7 +15296,7 @@ Long total=(long) 0;
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			System.out.println("Hi");
@@ -15082,7 +15307,15 @@ Long total=(long) 0;
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 				DatabaseMetaData dm = (DatabaseMetaData) conn.getMetaData();
 				//	 java.sql.Statement stmt = conn.createStatement();
@@ -15152,7 +15385,7 @@ Long total=(long) 0;
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			System.out.println("Hi");
@@ -15163,7 +15396,15 @@ Long total=(long) 0;
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 				DatabaseMetaData dm = (DatabaseMetaData) conn.getMetaData();
 				//	 java.sql.Statement stmt = conn.createStatement();
@@ -15387,7 +15628,7 @@ Long total=(long) 0;
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			System.out.println("Hi");
@@ -15398,7 +15639,15 @@ Long total=(long) 0;
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 				DatabaseMetaData dm = (DatabaseMetaData) conn.getMetaData();
 				//	 java.sql.Statement stmt = conn.createStatement();
@@ -15548,7 +15797,7 @@ Long total=(long) 0;
 			try {
 
 				//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-				String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+				/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 				String user = "sa";
 				String pass = "ksbc@123";
 				System.out.println("Hi");
@@ -15559,7 +15808,15 @@ Long total=(long) 0;
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				conn = DriverManager.getConnection(dbURL, user, pass);
+				conn = DriverManager.getConnection(dbURL, user, pass);*/
+				try
+				{
+				 conn = JDBCUtil.GetConnection();
+				 
+				}catch(Exception e)
+				{
+					e.printStackTrace();
+				}
 				if (conn != null) {
 					
 				      String sql;
@@ -15630,7 +15887,7 @@ Long total=(long) 0;
 			try {
 
 				//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-				String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+				/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 				String user = "sa";
 				String pass = "ksbc@123";
 				System.out.println("Hi");
@@ -15641,7 +15898,15 @@ Long total=(long) 0;
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				conn = DriverManager.getConnection(dbURL, user, pass);
+				conn = DriverManager.getConnection(dbURL, user, pass);*/
+				try
+				{
+				 conn = JDBCUtil.GetConnection();
+				 
+				}catch(Exception e)
+				{
+					e.printStackTrace();
+				}
 				if (conn != null) {
 					
 				      String sql;
@@ -15714,7 +15979,7 @@ Long total=(long) 0;
 			try {
 
 				//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-				String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+				/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 				String user = "sa";
 				String pass = "ksbc@123";
 				System.out.println("Hi");
@@ -15725,7 +15990,15 @@ Long total=(long) 0;
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				conn = DriverManager.getConnection(dbURL, user, pass);
+				conn = DriverManager.getConnection(dbURL, user, pass);*/
+				try
+				{
+				 conn = JDBCUtil.GetConnection();
+				 
+				}catch(Exception e)
+				{
+					e.printStackTrace();
+				}
 				if (conn != null) {
 					
 				      String sql;
@@ -15824,7 +16097,7 @@ Long total=(long) 0;
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			System.out.println("Hi");
@@ -15835,7 +16108,15 @@ Long total=(long) 0;
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 		
 			//	 java.sql.Statement stmt = conn.createStatement();
@@ -16150,7 +16431,7 @@ Long total=(long) 0;
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			System.out.println("Hi");
@@ -16161,7 +16442,15 @@ Long total=(long) 0;
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 		
 			//	 java.sql.Statement stmt = conn.createStatement();
@@ -16278,7 +16567,7 @@ Long total=(long) 0;
 				Preremarks="";
 			}
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			System.out.println("Hi");
@@ -16289,7 +16578,15 @@ Long total=(long) 0;
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 					      String sql;
 			      //sql = "  select EnrollmentId   FROM [KSBCL].[dbo].[Enrollment_WelfareFundPayments] where EnrollmentId='KAR/1/2002'";
@@ -16362,7 +16659,7 @@ Long total=(long) 0;
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			System.out.println("Hi");
@@ -16373,7 +16670,15 @@ Long total=(long) 0;
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 		
 			//	 java.sql.Statement stmt = conn.createStatement();
@@ -16464,7 +16769,7 @@ Long total=(long) 0;
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			System.out.println("Hi");
@@ -16475,7 +16780,15 @@ Long total=(long) 0;
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 		
 			//	 java.sql.Statement stmt = conn.createStatement();
@@ -16559,7 +16872,7 @@ Long total=(long) 0;
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			System.out.println("Hi");
@@ -16570,7 +16883,15 @@ Long total=(long) 0;
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 		
 			//	 java.sql.Statement stmt = conn.createStatement();
@@ -16631,7 +16952,7 @@ Long total=(long) 0;
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+		/*	String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			
@@ -16642,7 +16963,15 @@ Long total=(long) 0;
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 		
 			//	 java.sql.Statement stmt = conn.createStatement();
@@ -16719,7 +17048,7 @@ Long total=(long) 0;
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			
@@ -16730,7 +17059,15 @@ Long total=(long) 0;
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 		
 			//	 java.sql.Statement stmt = conn.createStatement();
@@ -16868,7 +17205,7 @@ Long total=(long) 0;
 			try {
 
 				//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-				String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*	String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 				String user = "sa";
 				String pass = "ksbc@123";
 				System.out.println("Hi");
@@ -16879,7 +17216,15 @@ Long total=(long) 0;
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				conn = DriverManager.getConnection(dbURL, user, pass);
+				conn = DriverManager.getConnection(dbURL, user, pass);*/
+				try
+				{
+				 conn = JDBCUtil.GetConnection();
+				 
+				}catch(Exception e)
+				{
+					e.printStackTrace();
+				}
 				if (conn != null) {
 					DatabaseMetaData dm = (DatabaseMetaData) conn.getMetaData();
 					
@@ -17420,7 +17765,7 @@ Long total=(long) 0;
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			System.out.println("Hi");
@@ -17431,7 +17776,15 @@ Long total=(long) 0;
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 		
 			//	 java.sql.Statement stmt = conn.createStatement();

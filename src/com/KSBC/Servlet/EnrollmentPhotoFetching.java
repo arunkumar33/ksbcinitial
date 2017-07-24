@@ -19,6 +19,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.KSBC.Util.JDBCUtil;
+
 /**
  * Servlet implementation class EnrollmentPhotoFetching
  */
@@ -66,7 +68,7 @@ int EnrollemntID = Integer.parseInt(request.getParameter("EnrollmentID"));
 		try {
 
 			//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-			String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+			/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 			String user = "sa";
 			String pass = "ksbc@123";
 			System.out.println("Hi");
@@ -77,7 +79,15 @@ int EnrollemntID = Integer.parseInt(request.getParameter("EnrollmentID"));
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			conn = DriverManager.getConnection(dbURL, user, pass);
+			conn = DriverManager.getConnection(dbURL, user, pass);*/
+			try
+			{
+			 conn = JDBCUtil.GetConnection();
+			 
+			}catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 			if (conn != null) {
 				DatabaseMetaData dm = (DatabaseMetaData) conn.getMetaData();
 				System.out.println("Driver name: " + dm.getDriverName());

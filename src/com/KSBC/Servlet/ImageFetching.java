@@ -34,6 +34,8 @@ import javax.swing.JLabel;
 
 import org.apache.commons.io.IOUtils;
 
+import com.KSBC.Util.JDBCUtil;
+
 /**
  * Servlet implementation class ImageFetching
  */
@@ -75,7 +77,7 @@ public class ImageFetching extends HttpServlet {
 				try {
 
 					//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-					String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+					/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 					String user = "sa";
 					String pass = "ksbc@123";
 					System.out.println("Hi");
@@ -86,7 +88,15 @@ public class ImageFetching extends HttpServlet {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-					conn = DriverManager.getConnection(dbURL, user, pass);
+					conn = DriverManager.getConnection(dbURL, user, pass);*/
+					try
+					{
+					 conn = JDBCUtil.GetConnection();
+					 
+					}catch(Exception e)
+					{
+						e.printStackTrace();
+					}
 					if (conn != null) {
 						DatabaseMetaData dm = (DatabaseMetaData) conn.getMetaData();
 					//	 java.sql.Statement stmt = conn.createStatement();

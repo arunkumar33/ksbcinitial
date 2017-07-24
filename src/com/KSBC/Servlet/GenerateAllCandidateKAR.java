@@ -29,6 +29,7 @@ import com.KSBC.Bean.ScheduleInterviewListBean;
 import com.KSBC.Bean.ValidatedFinalBean;
 import com.KSBC.JSPRelatedFunctions.JSPRelatedFunctionsimp;
 import com.KSBC.Util.HibernateUtil;
+import com.KSBC.Util.JDBCUtil;
 
 /**
  * Servlet implementation class GenerateAllCandidateKAR
@@ -150,7 +151,7 @@ Connection conn = null;
 
 
 	//String dbURL = "jdbc:sqlserver://107.180.71.40:4\\MSSQLSERVER";
-	String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
+	/*String dbURL="jdbc:sqlserver://107.180.71.40:49170;database=KSBCL;instanceName=MSSQLSERVER;";
 	String user = "sa";
 	String pass = "ksbc@123";
 	System.out.println("Hi");
@@ -161,7 +162,15 @@ Connection conn = null;
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
-	conn = DriverManager.getConnection(dbURL, user, pass);
+	conn = DriverManager.getConnection(dbURL, user, pass);*/
+try
+{
+ conn = JDBCUtil.GetConnection();
+ 
+}catch(Exception e)
+{
+	e.printStackTrace();
+}
 	if (conn != null) {
 		      String sql;
 	      //sql = "  select EnrollmentId   FROM [KSBCL].[dbo].[Enrollment_WelfareFundPayments] where EnrollmentId='KAR/1/2002'";
